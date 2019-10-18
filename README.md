@@ -26,7 +26,9 @@ end
 
 and run `pod install`.
 
-For Swift 5.0, use 1.1.3 version and define podspec: 
+Use latest SDK version for **Swift 5.1**
+
+For **Swift 5.0**, use `1.1.3` version and define podspec: 
 ```ruby
 pod 'Survicate', :podspec => 'https://repo.survicate.com/ios/1.1.3_swift5.0/Survicate.podspec'
 ```
