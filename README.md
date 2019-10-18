@@ -1,5 +1,5 @@
 [![Platform](https://img.shields.io/badge/platform-iOS-green.svg)](https://survicate.com/mobile-surveys/)
-[![Version](https://img.shields.io/cocoapods/v/Survicate.svg)](https://developers.survicate.com/mobile-sdk/ios/)
+[![Version](https://img.shields.io/cocoapods/v/Survicate.svg)](https://developers.survicate.com/mobile-sdk/#ios)
 
 # Mobile SDK - iOS
 
