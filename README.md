@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 Objective-C:
-```x
+```c
 // ...
 @import Survicate;
 
