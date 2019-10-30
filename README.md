@@ -14,6 +14,8 @@ To use this SDK you need an account at [survicate.com](https://survicate.com).
 
 ## Installation
 
+### CocoaPods
+
 We recommend using CocoaPods to get Survicate SDK.
 Define pod in your `Podfile`:
 ```ruby
@@ -32,6 +34,16 @@ For **Swift 5.0**, use `1.1.3` version and define podspec:
 ```ruby
 pod 'Survicate', :podspec => 'https://repo.survicate.com/ios/1.1.3_swift5.0/Survicate.podspec'
 ```
+
+### Manual installation
+
+[Download Survicate for iOS and extract the zip.](https://repo.survicate.com/latest/ios/Survicate.zip)
+
+For **Swift 5.0**, use [this version](https://repo.survicate.com/ios/1.1.3_swift5.0/Survicate.zip).
+
+Drag Survicate.framework into your project. Make sure "Copy items if needed" is selected and click Finish.
+
+In the target settings for your app, set the Survicate.framework to “Embed & Sign”. This can be found in the “Frameworks, Libraries, and Embedded Content” section of the “General” tab.
 
 ## Setup
 
