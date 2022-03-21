@@ -1,212 +1,40 @@
 [![Platform](https://img.shields.io/badge/platform-iOS-green.svg)](https://survicate.com/mobile-surveys/)
-[![Version](https://img.shields.io/cocoapods/v/Survicate.svg)](https://developers.survicate.com/mobile-sdk/#ios)
 
-# Mobile SDK - iOS
+# Swift Package for Survicate Mobile SDK for iOS
 
-The Survicate Mobile SDK for iOS allows you to survey specific groups of your mobile app users to understand their needs, expectations, and objections. This SDK is maintained by Survicate. If you're interested in Android version go [here](https://github.com/Survicate/survicate-android-sdk).
+The Survicate Mobile SDK for iOS allows you to survey specific groups of your mobile app users to understand their needs, expectations, and objections. This SDK is maintained by Survicate. If you're interested in Android version go [here](https://developers.survicate.com/mobile-sdk/installation/#android).
 
 ## Requirements
 
-SDK works on iOS at least on version 10.
+The Survicate Mobile SDK Swift Package is distributed in binary version and developed using Swift 5.3, that means minimal required version of Xcode is 12.0, however recommended is at least Xcode 13.1.
 
 To use this SDK you need an account at [survicate.com](https://survicate.com).
 [Sign up](https://panel.survicate.com/#/signup) for free and find your workspace key in Tracking Code section.
 
-## Installation
+## Swift Package integration
 
-### CocoaPods
+To get started with Survicate Mobile SDK as the Swift Package and integrate with your application please follow below steps:
 
-We recommend using CocoaPods to get Survicate SDK.
-Define pod in your `Podfile`:
-```ruby
-platform :ios, '10.0'
+- Open Xcode and select New Project in the File > New > Project… menu to create a new project for your application.
+- Choose the App template for your project.
+- When prompted, choose your app name (for example SurvicateSPDemo) and use the default options, next select the location to save the project and finally click on the Create button to finish project creation.
+- Once project is created, open your application in Xcode and select your project’s Package Dependencies tab
+- Copy the Survicate SDK Swift package repository URL into the search field:
 
-target 'MyApp' do
-    pod 'Survicate'
-end
+```
+https://github.com/Survicate/survicate-ios-sdk
 ```
 
-and run `pod install`.
+- Under Dependency Rule, select version according to your preferences
+- After the package download completes, select Add Package
 
-Use latest SDK version for **Swift 5.1**
+Survicate SDK should now be listed under Swift Package Dependencies in the Xcode Project navigator.
 
-For **Swift 5.0**, use `1.1.3` version and define podspec: 
-```ruby
-pod 'Survicate', :podspec => 'https://repo.survicate.com/ios/1.1.3_swift5.0/Survicate.podspec'
-```
+The detailed description how to setup and use Survicate Mobile SDK can be found here: [Mobile SDK Setup](https://developers.survicate.com/mobile-sdk/setup/).
 
-### Manual installation
+## Other integration options
 
-[Download Survicate for iOS and extract the zip.](https://repo.survicate.com/latest/ios/Survicate.zip)
-
-For **Swift 5.0**, use [this version](https://repo.survicate.com/ios/1.1.3_swift5.0/Survicate.zip).
-
-Drag Survicate.framework into your project. Make sure "Copy items if needed" is selected and click Finish.
-
-In the target settings for your app, set the Survicate.framework to “Embed & Sign”. This can be found in the “Frameworks, Libraries, and Embedded Content” section of the “General” tab.
-
-## Setup
-
-Add workspace key to your `Info.plist` file:
-```xml
-<key>Survicate</key>
-<dict>
-    <key>WorkspaceKey</key>
-    <string>YOUR_WORKSPACE_KEY</string>
-</dict>
-```
-
-You should initialize the SDK in your AppDelegate class.
-
-Swift:
-```swift
-import Survicate
-
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    // ...
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Survicate.shared.initialize()
-        return true
-    }
-}
-```
-
-Objective-C:
-```c
-// ...
-@import Survicate;
-
-@implementation AppDelegate
-// ...
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[Survicate shared] initialize];
-    return YES;
-}
-@end
-```
-
-### Displaying Surveys
-
-Survicate gives you the ability to send targeted surveys to your users within your app in a simple, easy, and fast way for you as well as Survicate application users.
-Within Survicate Panel you can choose criteria that your users have to meet in order for the surveys to appear in different ways.
-The users matching the conditions will see the survey automatically. You can set the criteria to be custom user attributes or user events you created.
-
-Available conditions:
-- Screen
-- Event
-- User attributes
-- Language
-- Known user
-- Operating system
-
-Make sure to list all the screens and events described in your application.
-Once you got this covered, you or any person responsible for creating and managing surveys will be able to trigger them from Survicate panel with no need for you to update the application.
-
-### Application screens
-
-A survey can appear when your application user is viewing a specific screen.
-As an example, a survey can be triggered to show up on the home screen of the application, after a user spends there more than 10 seconds.
-To achieve such effect, you need to send information to Survicate about user entering and leaving a screen. 
-
-Swift:
-```swift
-class PurchaseSuccessViewController: UIViewController {
-
-    static var SCREEN_KEY: String = "purchaseSuccess"
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        Survicate.shared.enterScreen(SCREEN_KEY)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        Survicate.shared.leaveScreen(SCREEN_KEY)
-    }
-
-}
-```
-
-Objective-C:
-```c
-@implementation PurchaseSuccessViewController
-
-- (void)viewWillAppear:(BOOL)animated {  
-  [super viewWillAppear:animated];
-  [[Survicate shared] enterScreenWithValue:@"purchaseSuccess"];
-}
-
--(void)viewWillDisappear:(BOOL)animated {  
-  [super viewWillDisappear:animated];  
-  [[Survicate shared] leaveScreenWithValue:@"purchaseSuccess"];  
-}
-
-@end
-```
-
-### Events
-
-You can log custom user events throughout your application. They can later be used to trigger the survey.
-
-Swift:
-```swift
-@IBAction func didPressButton(_ sender: Any) {
-    Survicate.shared.invokeEvent(name: "userPressedPurchase")
-}
-```
-
-Objective-C:
-```c
-- (IBAction)didPressButton:(id)sender {
-    [[Survicate shared] invokeEventWithName:@"userPressedPurchase"];
-}
-```
-
-### User traits
-
-You can assign custom attributes to your users. Those attributes can later be used to trigger the survey or even filter the survey results within Survicate panel. 
-
-Swift:
-```swift
-let traits: [UserTrait] = [
-    UserTrait.userId("someUserId"),
-    UserTrait.firstName("John"),
-    UserTrait(withName: "eyes", value: "blue")
-]
-Survicate.shared.setUserTraits(traits: traits)
-
-// or just
-Survicate.shared.setUserTrait(.userId("someOtherUserId"))
-```
-
-Objective-C:
-```c
-[[Survicate shared] setUserTraitsWithNamesAndValues:@{
-    @"user_id": @"someUserId",
-    @"first_name": @"John",
-    @"eyes": @"blue"
-}];
-
-// or just
-[[Survicate shared] setUserTraitWithName:@"user_id" value:@"someOtherUserId"];
-```
-
-Please keep in mind that user traits are cached, you only have to provide them once, e.g. when user logs in, NOT after each init().
-You can also change their values at any time (which may potentially trigger showing the survey).
-
-### Reset
-
-If you need to test surveys on your device, `reset()` method might be helpful. This method will reset all user data stored on your device (views, traits, answers).
-
-Swift:
-```swift
-Survicate.shared.reset()
-```
-
-Objective-C:
-```c
-[Survicate.shared reset];
-```
+The Survicate Mobile SDK can be also integrated using [CocoaPods](https://developers.survicate.com/mobile-sdk/installation/#cocoapods) or [manually](https://developers.survicate.com/mobile-sdk/installation/#manual-installation-1).
 
 ## Customer Support
 
