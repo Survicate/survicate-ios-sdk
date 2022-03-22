@@ -14,14 +14,14 @@ The detailed documentation is available [here](https://developers.survicate.com/
 
 The SDK supports iOS 10+. Survicate Mobile SDK is distributed in a binary version and developed using Swift 5.3. The minimum required version of Xcode is  12.0, however we recommend using the SDK with Xcode 13.1 and above. 
  
-Using Survicate Mobile SDK requires an account at panel.survicate.com. Sign up for free and find your workspace key in the [Access Keys tab](https://panel.survicate.com/o/0/w/0/settings/access-keys).
+Using Survicate Mobile SDK requires an account at [Survicate](https://survicate.com/mobile-surveys/). Sign up for free and find your workspace key in the [Access Keys tab](https://panel.survicate.com/o/0/w/0/settings/access-keys).
 
 
 ## **Installation**
 
 The SDK can be installed in the iOS mobile app using one of the three methods described below.
 
-### **Swift Package integration**
+### **Swift Package Manager**
 
 To install Survicate using Swift Package Manager: 
 
