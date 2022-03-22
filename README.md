@@ -4,27 +4,31 @@
 
 # **Mobile SDK - iOS**
 
-The Survicate Mobile SDK for iOS allows you to survey specific groups of your mobile app users to understand their needs, expectations, and objections. This SDK is maintained by Survicate. If you're interested in Android version go [here](https://github.com/Survicate/survicate-android-sdk).
+The Survicate Mobile SDK allows you to collect feedback from your mobile app users. Installed in your app, the SDK will enable you to trigger targeted surveys to better understand your users and collect their opinions about your products. 
+
+The SDK is maintained and supported by Survicate - The Customer Experience & Survey Software.
+
+The detailed documentation is available [here](https://developers.survicate.com/mobile-sdk/). 
 
 ## **Requirements**
 
-Survicate Mobile SDK is distributed in binary version and developed using Swift 5.3, that means minimal required version of Xcode is 12.0, however recommended is at least Xcode 13.1. The SDK supports iOS 10 and above.
+The SDK supports iOS 10+. Survicate Mobile SDK is distributed in a binary version and developed using Swift 5.3. The minimum required version of Xcode is  12.0, however we recommend using the SDK with Xcode 13.1 and above. 
+ 
+Using Survicate Mobile SDK requires an account at panel.survicate.com. Sign up for free and find your workspace key in the [Access Keys tab](https://panel.survicate.com/o/0/w/0/settings/access-keys).
 
-To use this SDK you need an account at [survicate.com](https://survicate.com).
-[Sign up](https://panel.survicate.com/#/signup) for free and find your workspace key in Tracking Code section.
 
 ## **Installation**
 
-The SDK can be integrated with iOS mobile application using few options as described below.
+The SDK can be installed in the iOS mobile app using one of the three methods described below.
 
 ### **Swift Package integration**
 
-To get started with Survicate Mobile SDK as the Swift Package and integrate with your application please follow below steps:
+To install Survicate using Swift Package Manager: 
 
 - Open Xcode and select New Project in the File > New > Project… menu to create a new project for your application.
 - Choose the App template for your project.
-- When prompted, choose your app name (for example SurvicateSPDemo) and use the default options, next select the location to save the project and finally click on the Create button to finish project creation.
-- Once project is created, open your application in Xcode and select your project’s Package Dependencies tab
+- When prompted, choose your app name (for example, SurvicateSPDemo) and use the default options, next select the location to save the project and finally click on the Create button to finish project creation.
+- Once the project is created, open your application in Xcode and select your project’s Package Dependencies tab
 - Copy the Survicate SDK Swift package repository URL `https://github.com/Survicate/survicate-ios-sdk` into the search field
 - Under Dependency Rule, select version according to your preferences
 ![Add Swift Package step 1](./images/add_package_0.png "Add Swift Package step 1")
@@ -35,14 +39,14 @@ To get started with Survicate Mobile SDK as the Swift Package and integrate with
 
 Survicate SDK should now be listed under Swift Package Dependencies in the Xcode Project navigator.
 
-The detailed description how to setup and use Survicate Mobile SDK can be found here: [Mobile SDK Setup](https://developers.survicate.com/mobile-sdk/setup/).
+The detailed description on how to use Survicate Mobile SDK is available here: [Mobile SDK Setup](https://developers.survicate.com/mobile-sdk/setup/).
 
-### **Other integration options**
+### **Other installation methods**
 
-The Survicate Mobile SDK can be also integrated using:
+The Survicate Mobile SDK can also be installed:
 
-- [CocoaPods](https://developers.survicate.com/mobile-sdk/installation/#cocoapods)
-- [manual process](https://developers.survicate.com/mobile-sdk/installation/#manual-installation-1)
+- [Using CocoaPods](https://developers.survicate.com/mobile-sdk/installation/#cocoapods)
+- [Manually](https://developers.survicate.com/mobile-sdk/installation/#manual-installation-1)
 
 ## **Customer Support**
 
