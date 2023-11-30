@@ -15,6 +15,6 @@ let package = Package(
         .binaryTarget(
             name: "Survicate",
             url: "https://repo.survicate.com/ios/4.0.0/Survicate.zip",
-            checksum: "c0617428106c584e3e5eedcd9f1b7f299b009924a8c2416ed81b4e96e9931595"),
+            checksum: "3f05a68c8a2a1a17cc95758ba4b3952e2b8f281d1af5f56a0ad270e37758049c"),
     ]
 )
