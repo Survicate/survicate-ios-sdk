@@ -2,7 +2,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Survicate.svg)](https://developers.survicate.com/mobile-sdk/#ios)
 [![Package Manager](https://img.shields.io/badge/package%20manager-compatible-green.svg?logo=Swift)](https://developers.survicate.com/mobile-sdk/#ios)
 
-# Mobile SDK - iOS
+# **Mobile SDK - iOS**
 
 The Survicate Mobile SDK allows you to collect feedback from your mobile app users. Installed in your app, the SDK will enable you to trigger targeted surveys to better understand your users and collect their opinions about your products. 
 
