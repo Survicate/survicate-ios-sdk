@@ -8,14 +8,15 @@ The Survicate Mobile SDK allows you to collect feedback from your mobile app use
 
 The SDK is maintained and supported by Survicate - The Customer Experience & Survey Software.
 
-The detailed documentation is available [here](https://developers.survicate.com/mobile-sdk/). 
+The detailed documentation is available [here](https://developers.survicate.com/mobile-sdk/ios/). 
 
 ## **Requirements**
 
-The SDK supports iOS 10+. Survicate Mobile SDK is distributed in a binary version and developed using Swift 5.3. The minimum required version of Xcode is  12.0, however we recommend using the SDK with Xcode 13.1 and above. 
- 
-Using Survicate Mobile SDK requires an account at [Survicate](https://survicate.com/mobile-surveys/). Sign up for free and find your workspace key in the [Access Keys tab](https://panel.survicate.com/o/0/w/0/settings/access-keys).
+- Minimum Xcode version: 14.0
+- Minimum iOS version: 14.0
 
+To use this SDK, you need an account at [survicate.com](https://survicate.com).
+[Sign up](https://panel.survicate.com/#/signup) for free and locate your workspace key in the Settings.
 
 ## **Installation**
 
@@ -48,6 +49,12 @@ The Survicate Mobile SDK can also be installed:
 - [Using CocoaPods](https://developers.survicate.com/mobile-sdk/installation/#cocoapods)
 - [Manually](https://developers.survicate.com/mobile-sdk/installation/#manual-installation-1)
 
-## **Customer Support**
+## Issues
 
-👋 If you bump into any problems or need more support contact us at hello@survicate.com
+Got an Issue?
+
+To make things more streamlined, we’ve transitioned our issue reporting to our customer support platform. If you encounter any bugs or have feedback, please reach out to our customer support team. Your insights are invaluable to us, and we’re here to help ensure your experience is top-notch!
+
+Contact us via Intercom in the application, or drop us an email at: [support@survicate.com]
+
+Thank you for your support and understanding!
