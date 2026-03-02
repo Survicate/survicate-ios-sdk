@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.10
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Survicate",
-            url: "https://repo.survicate.com/ios/7.1.1/Survicate.zip",
-            checksum: "e74677ae5558afdbe02cf4f0b8cdf1b541698dc0fe57fb396d6b57f8601dad7e"),
+            url: "https://repo.survicate.com/ios/7.2.0/Survicate.zip",
+            checksum: "5a6cb68fd9140ca86116b386c5d74c00749c14c12e1b342784a718e55451228a"),
     ]
 )
