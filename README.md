@@ -13,7 +13,7 @@ The detailed documentation is available [here](https://developers.survicate.com/
 ## **Requirements**
 
 - Minimum Xcode version: 14.0
-- Minimum iOS version: 14.0
+- Minimum iOS version: 15.0
 
 To use this SDK, you need an account at [survicate.com](https://survicate.com).
 [Sign up](https://panel.survicate.com/#/signup) for free and locate your workspace key in the Settings.
